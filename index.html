@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Viva | Tradición y Arte</title>
+    <!-- Tipografías de Google Fonts: Playfair Display, Inter y Cinzel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para el set de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <img src="img/Logo.png" alt="Cultura Viva Logo" class="site-logo">
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#tradiciones" class="nav-link"><i class="fa-solid fa-masks-theater"></i> Tradiciones</a>
+                <a href="#galeria" class="nav-link"><i class="fa-solid fa-images"></i> Galería</a>
+                <a href="#eventos" class="nav-link"><i class="fa-solid fa-calendar-days"></i> Eventos</a>
+                <a href="#contacto" class="nav-link"><i class="fa-solid fa-envelope"></i> Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn" title="Cambiar modo claro/oscuro">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO (Usando imagen1.jpg de fondo) -->
+    <section id="inicio" class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/imagen1.jpg') no-repeat center center/cover;">
+        <div class="hero-content">
+            <span class="subtitle-badge">Patrimonio y Raíces</span>
+            <h1>Celebremos Nuestra <span>Cultura Viva</span></h1>
+            <p>Descubre el legado, las tradiciones, la música y el arte ancestral que mantiene latente el espíritu de nuestras comunidades.</p>
+            <div class="hero-buttons">
+                <a href="#tradiciones" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Explorar Arte</a>
+                <a href="#eventos" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Ver Agenda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="search-bar-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Busca tradiciones, danzas o artesanías...">
+            </div>
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="danzas">Danzas</button>
+                <button class="filter-btn" data-filter="artesania">Artesanía</button>
+                <button class="filter-btn" data-filter="gastronomia">Gastronomía</button>
+                <button class="filter-btn" data-filter="rituales">Rituales</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TRADICIONES (TARJETAS DINÁMICAS) -->
+    <section id="tradiciones" class="traditions section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Expresiones Culturales</h2>
+                <p>Una mirada profunda a las costumbres que nos definen.</p>
+            </div>
+            <div class="grid-cards" id="traditionsGrid">
+                <!-- Tarjeta 1 (imagen2.jpg - Danzas) -->
+                <div class="card" data-category="danzas">
+                    <div class="card-img">
+                        <img src="img/imagen2.jpg" alt="Danza Tradicional">
+                        <span class="badge">Danzas</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Danzas Ancestrales</h3>
+                        <p>Movimientos y vestimentas multicolores que narran historias de batallas, cosechas y cosmología.</p>
+                        <a href="#" class="card-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 (imagen5.jpg - Alfarería) -->
+                <div class="card" data-category="artesania">
+                    <div class="card-img">
+                        <img src="img/imagen5.jpg" alt="Alfarería y Cerámica">
+                        <span class="badge">Artesanía</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Alfarería en Barro</h3>
+                        <p>Técnicas milenarias de modelado a mano y cocción tradicional transmitidas de generación en generación.</p>
+                        <a href="#" class="card-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 (imagen8.jpg - Trajes / Indumentaria) -->
+                <div class="card" data-category="gastronomia">
+                    <div class="card-img">
+                        <img src="img/imagen8.jpg" alt="Indumentaria y Tradición">
+                        <span class="badge">Tradición</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Indumentaria Típica</h3>
+                        <p>Textiles y vestimentas ceremoniales elaboradas con diseños únicos que identifican a nuestra región.</p>
+                        <a href="#" class="card-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tarjeta 4 (imagen7.jpg - Rituales y Fiestas) -->
+                <div class="card" data-category="rituales">
+                    <div class="card-img">
+                        <img src="img/imagen7.jpg" alt="Rituales y Fiestas">
+                        <span class="badge">Rituales</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Fiestas del Solsticio</h3>
+                        <p>Celebraciones comunitarias nocturnas de agradecimiento a la madre naturaleza por las cosechas.</p>
+                        <a href="#" class="card-link">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GALERÍA VISUAL (Usando imagen3, imagen4, imagen6, imagen9, imagen10 e imagen11) -->
+    <section id="galeria" class="gallery section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galería Fotográfica</h2>
+                <p>Capturas de nuestra identidad viva en cada rincón.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/imagen3.jpg" alt="Danza escénica">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/imagen4.jpg" alt="Grupo tradicional">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/imagen6.jpg" alt="Feria artesanal">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/imagen9.jpg" alt="Telar de hilos de colores">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/imagen10.jpg" alt="Platos de cerámica decorados">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/imagen11.jpg" alt="Encuentro comunitario">
+                    <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EVENTOS (ACORDEÓN) -->
+    <section id="eventos" class="events section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Próximos Encuentros</h2>
+                <p>Participa en talleres, ferias artesanales y festivales comunitarios.</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span><i class="fa-solid fa-calendar"></i> Feria Artesanal Raíces Vivas</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p><strong>Fecha:</strong> 15 de Noviembre | <strong>Lugar:</strong> Plaza Central</p>
+                        <p>Exhibición y venta directa de piezas de cerámica, textiles en telar y orfebrería tradicional.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span><i class="fa-solid fa-calendar"></i> Encuentro de Música y Danza Folclórica</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p><strong>Fecha:</strong> 22 de Noviembre | <strong>Lugar:</strong> Teatro Municipal</p>
+                        <p>Presentación de agrupaciones musicales con instrumentos autóctonos y comparsas regionales.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span><i class="fa-solid fa-calendar"></i> Taller Abierto de Cocina y Artesanía</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p><strong>Fecha:</strong> 30 de Noviembre | <strong>Lugar:</strong> Centro Comunitario</p>
+                        <p>Aprende técnicas culinarias tradicionales y modelado en barro guiado por maestros artesanos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="contact section-padding">
+        <div class="container">
+            <div class="contact-box">
+                <h2>Suma tu Voz a la Cultura</h2>
+                <p>¿Eres artesano, músico o gestor cultural? Escríbenos para formar parte de nuestra red.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Cuéntanos sobre tu iniciativa cultural..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Cultura Viva. Preservando nuestra identidad y memoria colectiva.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
